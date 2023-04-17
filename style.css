@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: #eff0f4;
+}
+.container {
+  position: relative;
+  max-width: 1200px;
+  width: 100%;
+  /* background: yellowgreen; */
+  padding: 40px;
+}
+.box {
+  padding: 50px 30px;
+  /* background: pink; */
+  overflow: hidden;
+}
+.card {
+  position: relative;
+  background: transparent;
+  box-shadow: inset 20px 20px 20px rgba(0, 0, 0, 0.05),
+    5px 25px 20px rgba(0, 0, 0, 0.05), 5px 20px 30px rgba(0, 0, 0, 0.05),
+    inset -20px -20px 25px rgba(255, 255, 255, 0.09);
+  width: 380px;
+  height: 380px;
+  border-radius: 55% 45% 37% 63% / 37% 46% 54% 63%;
+  transition: 0.5s ease-in-out;
+}
+.card::before {
+  content: "";
+  position: absolute;
+  top: 50px;
+  left: 65px;
+  width: 35px;
+  height: 35px;
+  background: #fff;
+  border-radius: 50%;
+  opacity: 0.9;
+}
+.card::after {
+  content: "";
+  position: absolute;
+  top: 90px;
+  left: 85px;
+  width: 15px;
+  height: 15px;
+  background: #fff;
+  border-radius: 50%;
+  opacity: 0.9;
+}
+.card:hover {
+  border-radius: 50%;
+}
+.card-content {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+.image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  opacity: 0.8;
+  border: 3px solid #fff;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.name-job {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 10px;
+  color: #333;
+}
+.name {
+  font-size: 20px;
+  font-weight: 600;
+}
+.job {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.ratings {
+  display: flex;
+  align-items: center;
+  margin-top: 18px;
+}
+.ratings i {
+  font-size: 22px;
+  color: var(--clr);
+  margin-top: 0 2px;
+  opacity: 0.75;
+}
+
+.card-content button {
+  position: relative;
+  padding: 8px 35px;
+  background: var(--clr);
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  font-size: 16px;
+  color: #fff;
+  margin-top: 30px;
+  font-weight: 500;
+  opacity: 0.75;
+}
+
+.card-content button::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 55%;
+  height: 5px;
+  background: rgba(250, 250, 250, 0.5);
+  border-radius: 5px;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  color: #666;
+}
+.swiper-button-next {
+  right: 0;
+}
+.swiper-button-prev {
+  left: 0;
+}
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #666;
+}
